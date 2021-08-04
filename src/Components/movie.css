@@ -1,0 +1,64 @@
+
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+   
+}
+
+
+
+body {
+    background-color: black;
+    color:white;
+    font-family: 'Montserrat', sans-serif !important;
+   
+   
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.title_div {
+    display: flex;
+    padding: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+}
+
+
+h2 {
+  
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+
+.api_info {
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+   
+    border-bottom: 1px solid white;
+    
+}
+
+.each_info {
+    color: #777777;
+}
+
+
+
+
+@media (min-width: 768px) {
+
+   
+}
