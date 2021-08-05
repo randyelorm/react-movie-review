@@ -17,6 +17,12 @@ body {
    
 }
 
+
+.h1_nav {
+    display: flex;
+    justify-content: space-between;
+}
+
 .img-box {
     display: flex;
     justify-content: center;

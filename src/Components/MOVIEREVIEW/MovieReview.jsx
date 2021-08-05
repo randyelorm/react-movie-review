@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios"
 import "./movie.css"
+import { Link} from "react-router-dom"
 
 
 class MovieReview extends Component {
@@ -15,7 +16,7 @@ class MovieReview extends Component {
 
     componentDidMount() {
 
-        // axios.get("https://api.nytimes.com/svc/movies/v2/reviews/all.json?{this.state.value}&api-key=EL60qpjMJbSG8Gi3c7ozM9h4GRpInBwR")
+    
         axios.get ("https://api.nytimes.com/svc/movies/v2/reviews/all.json?query=&api-key=EL60qpjMJbSG8Gi3c7ozM9h4GRpInBwR")
    
  
@@ -45,7 +46,17 @@ class MovieReview extends Component {
         return (
             <>
             <div className = "review_box">
-                   <div className = "title_div"> <h1>Randys Movie Reviews API</h1> </div>
+                 
+            <h1 className = "h1_nav"> 
+                <span>RANDY'S API TESTS </span>   
+                <span> 
+         
+                <Link to = "/topstories" className = "go_to_link"> Go To Top Stories API </Link>  
+                </span> 
+            </h1>
+
+
+                   <div className = "title_div"> <h1>Movies API (Using componentDidMount)</h1> <h1></h1> </div>
 
                     <div className = "APIinformation">
                         {    
@@ -61,7 +72,11 @@ class MovieReview extends Component {
                                             <h2>Critics pick: <span className ="each_info"> {each_review.critics_pick}</span></h2>
                                             <h2>By Line: <span className ="each_info"> {each_review.byline} </span></h2>
                                             <h2>  Head Line: <span className ="each_info">  {each_review.headline} </span> </h2>
-                                            <h2 className = "summary">  Movie Summary: <span className ="each_info">{each_review.summary_short} </span></h2>
+                                            <h2 className = "summary">  Movie Summary: <span className ="each_info">{each_review.summary_short} </span>
+                                            <span> <a href={each_review.link.url}>See More: </a> </span>
+                                            </h2>
+
+ 
                                             <h2> Publication Date: <span className ="each_info">  {each_review.publication_date} </span> </h2>
                                             <h2>Opening Date: <span className ="each_info"> {each_review.opening_date} </span></h2>
                                             <h2>Date Updated: <span className ="each_info">  {each_review.date_updated} </span> </h2>
