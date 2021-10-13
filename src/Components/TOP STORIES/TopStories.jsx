@@ -15,7 +15,7 @@ const TopStories = () => {
         
         .then(
             (json_data)=> {
-                console.log(json_data.data.results)
+              
                 setTopStories(json_data.data.results)
             }
         )

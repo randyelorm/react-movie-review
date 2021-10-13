@@ -17,7 +17,7 @@ class MovieReview extends Component {
     componentDidMount() {
 
     
-        axios.get ("https://api.nytimes.com/svc/movies/v2/reviews/all.json?query=&api-key=EL60qpjMJbSG8Gi3c7ozM9h4GRpInBwR")
+        axios.get ("https://api.nytimes.com/svc/movies/v2/reviews/all.json?query=&api-key=bHxn40w2REYoYtqGaLdUSwL0tpjHW4D8")
    
  
         .then (
@@ -39,6 +39,7 @@ class MovieReview extends Component {
         )
 
     }
+    
 
 
 
@@ -66,7 +67,14 @@ class MovieReview extends Component {
                                 
                                     return (
                                         <div className = "api_info">
-                                            <h2 className = "img-box"> <img src={each_review.multimedia.src} alt="" /> </h2>
+  
+                                            <h2 className = "img-box"> <img src={each_review.multimedia?.src} alt="" /> </h2>
+                                            {/* 
+                                                I had an error with rendering the image here in multimedia and I got this solution 
+                                                from stackoverflow. It's called optional chaining: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+                                                // answer on stackoverflow: https://stackoverflow.com/questions/68131309/typeerror-cannot-read-property-url-of-undefined-react-app-crashing
+                                            
+                                            */}
                                             <h2>Movie Title: <span className ="each_info">{each_review.display_title} </span> </h2>
                                             <h2>Rating: <span className ="each_info">{each_review.mpaa_rating} </span></h2>
                                             <h2>Critics pick: <span className ="each_info"> {each_review.critics_pick}</span></h2>
