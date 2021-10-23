@@ -73,6 +73,7 @@ class MovieReview extends Component {
                                                 I had an error with rendering the image here in multimedia and I got this solution 
                                                 from stackoverflow. It's called optional chaining: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
                                                 // answer on stackoverflow: https://stackoverflow.com/questions/68131309/typeerror-cannot-read-property-url-of-undefined-react-app-crashing
+                                                // this says that if you have each_review.multimedia in the api call then return its src value
                                             
                                             */}
                                             <h2>Movie Title: <span className ="each_info">{each_review.display_title} </span> </h2>

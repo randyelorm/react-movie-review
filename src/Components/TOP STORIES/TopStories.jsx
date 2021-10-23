@@ -52,8 +52,9 @@ const TopStories = () => {
                                        
                                        <h3> Category: {each_topstory.section}</h3>
                                        <h3>{each_topstory.title} <span>{each_topstory.byline}</span> </h3> 
-                                      <div className = "top_img-box"> <img src= {each_topstory.multimedia[0].url} className = "img"  alt="" /> </div>
-                                       <h2 className ="each_info">{each_topstory.multimedia[0].caption }</h2> 
+                                      <div className = "top_img-box"> <img src= {each_topstory.multimedia?.url} className = "img"  alt="" /> </div>
+                                       <h2 className ="each_info">{each_topstory.multimedia?.caption }</h2> 
+                                     
                                   
                                        <h2 className ="each_info">{each_topstory.abstract}  <span><a href={each_topstory.url}>See More</a> </span> </h2>  
 
